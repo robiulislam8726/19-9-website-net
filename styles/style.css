@@ -87,8 +87,8 @@ body {
 }
 
 .cta-button {
-    background-color: #e9e50b;
-    color: #f10b0b;
+    background-color: #ee0e0e;
+    color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -214,7 +214,7 @@ body {
 .card-button {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #4CAF50;
+    background-color: #ee0e0e;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -359,7 +359,7 @@ h1 {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 10px;
-    background-color: #4CAF50;
+    background-color: #ee0e0e;
     color: white;
     text-decoration: none;
     border-radius: 5px;
