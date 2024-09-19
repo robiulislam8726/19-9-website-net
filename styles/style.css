@@ -101,17 +101,18 @@ body {
     background-color: #ddd;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    margin: 20px;
+ .containerrr {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: grid;
 }
-.container p{
+.containerrr p{
     font-size: 10px;
     margin-top: 15px;
     color: #e60909;
 }
-.sidebar {
+/* .sidebar {
     flex: 1;
     background-color: #f4f4f4;
     padding: 15px;
@@ -139,15 +140,92 @@ body {
 
 .sidebar a:hover {
     color: #4CAF50;
+}  */
+/****---Main content start---*/
+/* .main-content { */
+    /* flex: 3; */
+    /* padding: 15px;
+    background-color: #f8f5f5; */
+    /* margin-left: 20px; */
+
+/****---Main content end---*/
+/****---header end----*/
+/*--Hash Tag style start--*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    flex: 3;
+}
+.container p{
+    text-align: center;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #333;
 }
 
-.main-content {
-    flex: 3;
-    padding: 15px;
-    background-color: #fff;
-    margin-left: 20px;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;  
+    /* display: grid; */
+    grid-template-columns: repeat(3, 1fr);
+  
 }
-/****---header end----*/
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px; 
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+ .card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+} 
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-button:hover {
+    background-color: #45a049;
+}
+
+
 .toggle {
     display: none;
     font-size: 24px;
@@ -155,7 +233,7 @@ body {
     cursor: pointer ;
 }
 /****---Hash Tag style start----*/
-.container {
+.containerrr {
     text-align: center;
     padding: 20px;
 }
@@ -248,6 +326,70 @@ h1 {
 .subscribe-button:hover {
     background-color: #45a049;
 }
+
+
+
+/*-- main content--*/
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 3; /* Takes up more space than the sidebar */
+    margin-right: 20px;
+}
+
+.content-article {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.content-image {
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #45a049;
+}
+
+.sidebar {
+    flex: 1; /* Takes up less space than the main content */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #4CAF50;
+}
 @media (max-width: 768px) {
     .nav-list {
         display: none;
@@ -270,12 +412,16 @@ h1 {
     .toggle {
         display: block;
     }
-    .container {
+    .containerrr {
         flex-direction: column;
     }
-    .container p{
+    .containerrr p{
         margin-top:2px;
         
+    }
+    .card {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 400px; /* Limit width */
     }
     .sidebar {
         margin-bottom: 20px;
